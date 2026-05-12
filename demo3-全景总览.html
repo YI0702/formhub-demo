@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>全景总览 · FormHub</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-logo">
+    <div class="app-logo-mark">F</div>
+    FormHub
+  </div>
+  <nav class="app-nav">
+    <a href="index.html">首页</a>
+    <a href="demo0-交互模式.html">交互模式</a>
+    <a href="demo1-洞察归因.html">洞察归因</a>
+    <a href="demo2-规则配置.html">规则配置</a>
+    <a href="demo3-全景总览.html" class="active">全景总览</a>
+  </nav>
+  <div class="app-user">
+    <span>联盟产运中心</span>
+    <div class="app-user-avatar">H</div>
+  </div>
+</header>
+
+<div class="container">
+
+<div class="page-hero">
+  <h1>全景总览</h1>
+  <p>所有模板/规则/冲突一张图看清，按你的视角组织信息</p>
+</div>
+
+<div class="ai-input-card">
+  <div class="ai-input-label">AI 智能助手</div>
+  <div class="ai-input-row">
+    <input type="text" class="ai-input" placeholder="比如：给我看激励视频场景下消耗Top 10的模板">
+    <button class="ai-send-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<div class="module-tabs">
+  <a href="demo1-洞察归因.html" class="module-tab">洞察归因</a>
+  <a href="#" class="module-tab active">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+    全景总览
+  </a>
+  <a href="#" class="module-tab">模板生产</a>
+  <a href="demo2-规则配置.html" class="module-tab">规则配置</a>
+  <a href="#" class="module-tab">效果回溯</a>
+  <a href="#" class="module-tab">问题排查</a>
+</div>
+
+<div class="perspective-bar">
+  <div class="perspective-label">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    工作视角
+  </div>
+
+  <div class="perspective-tabs">
+    <div class="perspective-tab active" data-view="traffic">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      流量视角
+      <span class="badge">按场景</span>
+    </div>
+    <div class="perspective-tab" data-view="budget">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      预算视角
+      <span class="badge">按行业</span>
+    </div>
+    <div class="perspective-tab" data-view="custom">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      自定义视角
+    </div>
+  </div>
+
+  <div class="perspective-divider"></div>
+
+  <div class="sub-tabs" style="margin-bottom: 0;">
+    <div class="sub-tab active">模板</div>
+    <div class="sub-tab">规则</div>
+    <div class="sub-tab">冲突</div>
+    <div class="sub-tab">变更</div>
+  </div>
+
+  <div class="perspective-meta">
+    <span>当前视角：流量视角 · 按场景分组</span>
+    <a>设为默认视角</a>
+  </div>
+</div>
+
+<div class="metric-grid cols-4">
+  <div class="metric-card">
+    <div class="metric-label">线上模板总数</div>
+    <div class="metric-value">47</div>
+    <div class="metric-change up">↑ 3（近7天）</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-label">活跃规则数</div>
+    <div class="metric-value">126</div>
+    <div class="metric-change">8 个本周变更</div>
+  </div>
+  <div class="metric-card" style="background: #FFECE8;">
+    <div class="metric-label" style="color: #A8071A;">潜在冲突</div>
+    <div class="metric-value danger">3</div>
+    <div class="metric-change down">需立即处理</div>
+  </div>
+  <div class="metric-card" style="background: #F0F5FF;">
+    <div class="metric-label" style="color: #2B6FE6;">日均消耗</div>
+    <div class="metric-value">1,237w</div>
+    <div class="metric-change up">↑ 4.2% vs 上周</div>
+  </div>
+</div>
+
+<div id="view-traffic" class="view-content">
+
+  <div class="group-section">
+    <div class="group-header">
+      <span class="group-toggle">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </span>
+      <div class="group-icon scene-incentive">激</div>
+      <div>
+        <div class="group-title">激励视频场景</div>
+        <div class="font-12 text-secondary">用户主动点击激励入口触发的广告</div>
+      </div>
+      <div class="group-stats">
+        <div class="group-stat"><span>模板</span><strong>32</strong></div>
+        <div class="group-stat"><span>消耗</span><strong>1,083w</strong></div>
+        <div class="group-stat"><span>CTR</span><strong class="text-success">48%</strong></div>
+        <div class="group-stat"><span>冲突</span><strong class="text-danger">2</strong></div>
+      </div>
+    </div>
+    <div class="group-content">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>模板ID</th>
+            <th>模板名称</th>
+            <th>子类型</th>
+            <th>CTR</th>
+            <th>CVR</th>
+            <th>eCPM</th>
+            <th>日均消耗</th>
+            <th>规则数</th>
+            <th>状态</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="link">1150387</span></td>
+            <td>体验激励-强制版10s</td>
+            <td>体验激励</td>
+            <td class="text-success">62.1%</td>
+            <td>14.2%</td>
+            <td>97</td>
+            <td>58w</td>
+            <td>4</td>
+            <td><span class="tag tag-success">线上</span></td>
+          </tr>
+          <tr style="background: #FFF7E8;">
+            <td><span class="link">1150652</span></td>
+            <td>体验激励-强制版15s</td>
+            <td>体验激励</td>
+            <td class="text-danger">54.3%</td>
+            <td>12.3%</td>
+            <td>88</td>
+            <td>32w</td>
+            <td>3</td>
+            <td><span class="tag tag-warning">异常</span></td>
+          </tr>
+          <tr>
+            <td><span class="link">1148901</span></td>
+            <td>下载激励-强制版</td>
+            <td>下载激励</td>
+            <td>44.0%</td>
+            <td>7.8%</td>
+            <td class="text-success">186</td>
+            <td>28w</td>
+            <td>2</td>
+            <td><span class="tag tag-success">线上</span></td>
+          </tr>
+          <tr>
+            <td><span class="link">1149205</span></td>
+            <td>点击激励-强制版</td>
+            <td>点击激励</td>
+            <td class="text-success">70.0%</td>
+            <td>6.7%</td>
+            <td>44</td>
+            <td>15w</td>
+            <td>1</td>
+            <td><span class="tag tag-success">线上</span></td>
+          </tr>
+          <tr>
+            <td><span class="link">1145025</span></td>
+            <td>宝箱交互观看激励</td>
+            <td>观看激励</td>
+            <td>23.0%</td>
+            <td>16.0%</td>
+            <td>96</td>
+            <td>8w</td>
+            <td>0</td>
+            <td><span class="tag tag-default">大盘</span></td>
+          </tr>
+          </tbody>
+        </table>
+        <div style="padding: 10px 12px; text-align: center;"><a class="link font-13">展开全部 32 个模板</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="group-section">
+    <div class="group-header">
+      <span class="group-toggle">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </span>
+      <div class="group-icon scene-splash">屏</div>
+      <div>
+        <div class="group-title">开屏场景</div>
+        <div class="font-12 text-secondary">App冷热启动时全屏展示</div>
+      </div>
+      <div class="group-stats">
+        <div class="group-stat"><span>模板</span><strong>5</strong></div>
+        <div class="group-stat"><span>消耗</span><strong>62w</strong></div>
+        <div class="group-stat"><span>CTR</span><strong>9.2%</strong></div>
+        <div class="group-stat"><span>冲突</span><strong>0</strong></div>
+      </div>
+    </div>
+    <div class="group-content">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>模板ID</th>
+            <th>模板名称</th>
+            <th>子类型</th>
+            <th>CTR</th>
+            <th>CVR</th>
+            <th>eCPM</th>
+            <th>日均消耗</th>
+            <th>状态</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="link">1153012</span></td>
+            <td>奖励式开屏</td>
+            <td>点击激励</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td><span class="tag tag-info">灰度5%</span></td>
+          </tr>
+          <tr>
+            <td><span class="link">1142001</span></td>
+            <td>开屏标准版</td>
+            <td>普通</td>
+            <td>9.0%</td>
+            <td>1.2%</td>
+            <td>52</td>
+            <td>45w</td>
+            <td><span class="tag tag-success">线上</span></td>
+          </tr>
+          <tr>
+            <td><span class="link">1142003</span></td>
+            <td>开屏全屏点击</td>
+            <td>普通</td>
+            <td>9.5%</td>
+            <td>1.4%</td>
+            <td>58</td>
+            <td>17w</td>
+            <td><span class="tag tag-success">线上</span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="group-section">
+    <div class="group-header">
+      <span class="group-toggle">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </span>
+      <div class="group-icon scene-interstitial">插</div>
+      <div>
+        <div class="group-title">插屏场景</div>
+        <div class="font-12 text-secondary">App内切换/退出时弹出</div>
+      </div>
+      <div class="group-stats">
+        <div class="group-stat"><span>模板</span><strong>4</strong></div>
+        <div class="group-stat"><span>消耗</span><strong>38w</strong></div>
+        <div class="group-stat"><span>CTR</span><strong>6.5%</strong></div>
+        <div class="group-stat"><span>冲突</span><strong>0</strong></div>
+      </div>
+    </div>
+    <div class="group-content">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>模板ID</th>
+            <th>模板名称</th>
+            <th>子类型</th>
+            <th>CTR</th>
+            <th>CVR</th>
+            <th>eCPM</th>
+            <th>日均消耗</th>
+            <th>状态</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="link">1153015</span></td>
+            <td>奖励式插屏</td>
+            <td>体验激励</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td><span class="tag tag-info">灰度5%</span></td>
+          </tr>
+          <tr>
+            <td><span class="link">1143002</span></td>
+            <td>插屏全屏标准</td>
+            <td>普通</td>
+            <td>6.8%</td>
+            <td>1.5%</td>
+            <td>78</td>
+            <td>26w</td>
+            <td><span class="tag tag-success">线上</span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="group-section">
+    <div class="group-header">
+      <span class="group-toggle">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </span>
+      <div class="group-icon scene-feed">流</div>
+      <div>
+        <div class="group-title">原生信息流场景</div>
+        <div class="font-12 text-secondary">嵌入媒体内容流的原生广告</div>
+      </div>
+      <div class="group-stats">
+        <div class="group-stat"><span>模板</span><strong>6</strong></div>
+        <div class="group-stat"><span>消耗</span><strong>54w</strong></div>
+        <div class="group-stat"><span>CTR</span><strong>3.2%</strong></div>
+        <div class="group-stat"><span>冲突</span><strong>1</strong></div>
+      </div>
+    </div>
+    <div class="group-content">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>模板ID</th>
+            <th>模板名称</th>
+            <th>子类型</th>
+            <th>CTR</th>
+            <th>CVR</th>
+            <th>eCPM</th>
+            <th>日均消耗</th>
+            <th>状态</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="link">1144105</span></td>
+            <td>七猫高定×任务</td>
+            <td>激励任务</td>
+            <td>15.0%</td>
+            <td>8.0%</td>
+            <td>62</td>
+            <td>22w</td>
+            <td><span class="tag tag-success">线上</span></td>
+          </tr>
+          <tr>
+            <td><span class="link">1144108</span></td>
+            <td>原生信息流大图</td>
+            <td>普通</td>
+            <td>3.0%</td>
+            <td>1.2%</td>
+            <td>32</td>
+            <td>18w</td>
+            <td><span class="tag tag-success">线上</span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div id="view-budget" class="view-content" style="display: none;">
+
+  <div class="group-section">
+    <div class="group-header">
+      <span class="group-toggle">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </span>
+      <div class="group-icon budget-game">游</div>
+      <div>
+        <div class="group-title">微信小游戏预算</div>
+        <div class="font-12 text-secondary">PT=46 · 试玩跳转得奖</div>
+      </div>
+      <div class="group-stats">
+        <div class="group-stat"><span>覆盖模板</span><strong>3</strong></div>
+        <div class="group-stat"><span>消耗</span><strong>198w</strong></div>
+        <div class="group-stat"><span>CTR</span><strong class="text-success">58%</strong></div>
+        <div class="group-stat"><span>CVR</span><strong class="text-success">44%</strong></div>
+        <div class="group-stat"><span>eCPM</span><strong class="text-success">285</strong></div>
+      </div>
+    </div>
+    <div class="group-content">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>模板</th>
+            <th>场景</th>
+            <th>CTR</th>
+            <th>CVR</th>
+            <th>eCPM</th>
+            <th>消耗</th>
+            <th>覆盖率</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="link">小游戏体验-强制</span></td>
+            <td>激励视频</td>
+            <td class="text-success">60.0%</td>
+            <td class="text-success">46.0%</td>
+            <td class="text-success">293</td>
+            <td>165w</td>
+            <td>83%</td>
+          </tr>
+          <tr>
+            <td><span class="link">小游戏体验-可选</span></td>
+            <td>激励视频</td>
+            <td>18.5%</td>
+            <td class="text-success">42.0%</td>
+            <td>240</td>
+            <td>22w</td>
+            <td>11%</td>
+          </tr>
+          <tr>
+            <td><span class="link">奖励式插屏-小游戏</span></td>
+            <td>插屏</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td><span class="tag tag-info">灰度</span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="group-section">
+    <div class="group-header">
+      <span class="group-toggle">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </span>
+      <div class="group-icon budget-drama">剧</div>
+      <div>
+        <div class="group-title">微信短剧预算</div>
+        <div class="font-12 text-secondary">行业=2147484298 · 视频前6s+体验</div>
+      </div>
+      <div class="group-stats">
+        <div class="group-stat"><span>覆盖模板</span><strong>2</strong></div>
+        <div class="group-stat"><span>消耗</span><strong>56w</strong></div>
+        <div class="group-stat"><span>CTR</span><strong class="text-success">75%</strong></div>
+        <div class="group-stat"><span>CVR</span><strong class="text-success">80%</strong></div>
+        <div class="group-stat"><span>eCPM</span><strong>50</strong></div>
+      </div>
+    </div>
+    <div class="group-content">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>模板</th>
+            <th>场景</th>
+            <th>CTR</th>
+            <th>CVR</th>
+            <th>eCPM</th>
+            <th>消耗</th>
+            <th>覆盖率</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="link">短剧体验-强制版</span></td>
+            <td>激励视频</td>
+            <td class="text-success">75.0%</td>
+            <td class="text-success">80.0%</td>
+            <td>50</td>
+            <td>56w</td>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <td><span class="link">短剧体验-可选版</span></td>
+            <td>激励视频</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td><span class="tag tag-default">未上线</span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="group-section">
+    <div class="group-header">
+      <span class="group-toggle">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </span>
+      <div class="group-icon budget-shop">店</div>
+      <div>
+        <div class="group-title">微信小店 / 直播预算</div>
+        <div class="font-12 text-secondary">落地页=60005,70001 · 直播间观看激励</div>
+      </div>
+      <div class="group-stats">
+        <div class="group-stat"><span>覆盖模板</span><strong>3</strong></div>
+        <div class="group-stat"><span>消耗</span><strong>43w</strong></div>
+        <div class="group-stat"><span>CTR</span><strong>40%</strong></div>
+        <div class="group-stat"><span>CVR</span><strong class="text-warning">2.8%</strong></div>
+        <div class="group-stat"><span>eCPM</span><strong>72</strong></div>
+      </div>
+    </div>
+    <div class="group-content">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>模板</th>
+            <th>场景</th>
+            <th>CTR</th>
+            <th>CVR</th>
+            <th>eCPM</th>
+            <th>消耗</th>
+            <th>覆盖率</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="link">直播小店-强制版</span></td>
+            <td>激励视频</td>
+            <td>64.0%</td>
+            <td>3.0%</td>
+            <td>116</td>
+            <td>34w</td>
+            <td>79%</td>
+          </tr>
+          <tr>
+            <td><span class="link">直播小店-可选版</span></td>
+            <td>激励视频</td>
+            <td>16.0%</td>
+            <td class="text-danger">0.1%</td>
+            <td>28</td>
+            <td>9w</td>
+            <td>21%</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="group-section">
+    <div class="group-header">
+      <span class="group-toggle">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </span>
+      <div class="group-icon budget-ai">AI</div>
+      <div>
+        <div class="group-title">AI 预算（元宝/火龙等）</div>
+        <div class="font-12 text-secondary">PT=12 · prompt引导玩法</div>
+      </div>
+      <div class="group-stats">
+        <div class="group-stat"><span>覆盖模板</span><strong>1</strong></div>
+        <div class="group-stat"><span>消耗</span><strong>15w</strong></div>
+        <div class="group-stat"><span>CTR</span><strong>52%</strong></div>
+        <div class="group-stat"><span>CVR</span><strong>10%</strong></div>
+        <div class="group-stat"><span>eCPM</span><strong>78</strong></div>
+      </div>
+    </div>
+    <div class="group-content">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>模板</th>
+            <th>场景</th>
+            <th>CTR</th>
+            <th>CVR</th>
+            <th>eCPM</th>
+            <th>消耗</th>
+            <th>状态</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="link">体验激励-AI prompt</span></td>
+            <td>激励视频</td>
+            <td>52.0%</td>
+            <td>10.0%</td>
+            <td>78</td>
+            <td>15w</td>
+            <td><span class="tag tag-info">迭代中（真prompt）</span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="group-section">
+    <div class="group-header">
+      <span class="group-toggle">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </span>
+      <div class="group-icon budget-app">App</div>
+      <div>
+        <div class="group-title">应用推广预算（PT=12/19）</div>
+        <div class="font-12 text-secondary">下载/激活/次留考核</div>
+      </div>
+      <div class="group-stats">
+        <div class="group-stat"><span>覆盖模板</span><strong>8</strong></div>
+        <div class="group-stat"><span>消耗</span><strong>485w</strong></div>
+        <div class="group-stat"><span>CTR</span><strong>52%</strong></div>
+        <div class="group-stat"><span>CVR</span><strong>9.5%</strong></div>
+        <div class="group-stat"><span>eCPM</span><strong class="text-success">168</strong></div>
+        <div class="group-stat"><span>冲突</span><strong class="text-danger">2</strong></div>
+      </div>
+    </div>
+    <div class="group-content">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>模板</th>
+            <th>场景</th>
+            <th>CTR</th>
+            <th>CVR</th>
+            <th>eCPM</th>
+            <th>消耗</th>
+            <th>覆盖率</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><span class="link">下载激励-强制版</span></td>
+            <td>激励视频</td>
+            <td>44.0%</td>
+            <td>7.8%</td>
+            <td class="text-success">186</td>
+            <td>198w</td>
+            <td>41%</td>
+          </tr>
+          <tr>
+            <td><span class="link">体验激励-强制10s</span></td>
+            <td>激励视频</td>
+            <td class="text-success">62.1%</td>
+            <td>14.2%</td>
+            <td>97</td>
+            <td>158w</td>
+            <td>33%</td>
+          </tr>
+          <tr style="background: #FFF7E8;">
+            <td><span class="link">体验激励-强制15s</span></td>
+            <td>激励视频</td>
+            <td class="text-danger">54.3%</td>
+            <td>12.3%</td>
+            <td>88</td>
+            <td>89w</td>
+            <td>18%</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div id="view-custom" class="view-content" style="display: none;">
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">自定义视角</div>
+      <span class="text-secondary font-13">选择分组维度组合，工作台会按你的偏好组织数据</span>
+    </div>
+
+    <div style="font-size: 13px; color: #4E5969; margin-bottom: 12px; font-weight: 500;">选择分组维度（可多级嵌套）</div>
+
+    <div style="display: flex; gap: 12px; align-items: center; padding: 12px; background: #F7F8FA; border-radius: 8px; margin-bottom: 12px;">
+      <span class="text-secondary font-13">第一层：</span>
+      <select style="flex: 1;">
+        <option>场景（开屏/插屏/激励/信息流）</option>
+        <option>预算行业（小游戏/短剧/小店/AI/应用）</option>
+        <option>模板类型（观看/点击/体验/下载/深转）</option>
+        <option>负责人</option>
+        <option>状态（线上/灰度/异常）</option>
+      </select>
+      <span class="text-secondary font-13">第二层：</span>
+      <select style="flex: 1;">
+        <option>预算行业</option>
+        <option>模板类型</option>
+        <option>负责人</option>
+        <option>不再分组</option>
+      </select>
+    </div>
+
+    <div style="font-size: 13px; color: #4E5969; margin-bottom: 12px; font-weight: 500;">选择展示指标</div>
+
+    <div style="margin-bottom: 12px;">
+      <span class="dimension-chip removable">CTR</span>
+      <span class="dimension-chip removable">CVR</span>
+      <span class="dimension-chip removable">eCPM</span>
+      <span class="dimension-chip removable">日均消耗</span>
+      <span class="dimension-chip removable">规则数</span>
+      <span class="dimension-chip removable">状态</span>
+      <span class="dimension-chip" style="border-style: dashed; color: #86909C;">+ 添加指标</span>
+    </div>
+
+    <div style="font-size: 13px; color: #4E5969; margin-bottom: 12px; font-weight: 500;">已保存的视角模板</div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+      <div style="border: 1px solid #E5E6EB; border-radius: 8px; padding: 14px; cursor: pointer;">
+        <div style="font-size: 14px; font-weight: 500; margin-bottom: 4px;">流量视角（默认）</div>
+        <div class="font-12 text-secondary">场景 → 子类型 · 流量产品常用</div>
+      </div>
+      <div style="border: 1px solid #E5E6EB; border-radius: 8px; padding: 14px; cursor: pointer;">
+        <div style="font-size: 14px; font-weight: 500; margin-bottom: 4px;">预算视角</div>
+        <div class="font-12 text-secondary">行业 → 场景 · 预算产品常用</div>
+      </div>
+      <div style="border: 1px solid #E5E6EB; border-radius: 8px; padding: 14px; cursor: pointer;">
+        <div style="font-size: 14px; font-weight: 500; margin-bottom: 4px;">SDK视角</div>
+        <div class="font-12 text-secondary">SDK版本 → 模板 · 研发常用</div>
+      </div>
+    </div>
+
+    <div class="custom-perspective" style="margin-top: 16px;">
+      <strong>提示：</strong>视角配置自动保存。你也可以创建新的视角模板分享给团队成员。
+    </div>
+
+    <div class="flex flex-gap-8 mt-16">
+      <button class="btn btn-primary">应用视角</button>
+      <button class="btn btn-default">保存为新模板</button>
+      <button class="btn btn-default">恢复默认</button>
+    </div>
+  </div>
+
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;">
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">⚠ 冲突告警</div>
+      <a href="demo2-规则配置.html" class="text-secondary font-13" style="text-decoration: none;">查看全部 →</a>
+    </div>
+
+    <div class="alert alert-danger" style="margin-bottom: 8px;">
+      <div class="alert-icon">!</div>
+      <div>
+        <div class="alert-title">冲突 #1：体验激励 vs 下载激励</div>
+        <div class="alert-content">PT=12+OG=104 同时存在 2 个模板，未定义优先级</div>
+      </div>
+    </div>
+
+    <div class="alert alert-warning" style="margin-bottom: 8px;">
+      <div class="alert-icon">!</div>
+      <div>
+        <div class="alert-title">冲突 #2：标签 356 范围重叠</div>
+        <div class="alert-content">两条体验激励规则的预算圈定有30%重叠</div>
+      </div>
+    </div>
+
+    <div class="alert alert-warning">
+      <div class="alert-icon">!</div>
+      <div>
+        <div class="alert-title">冲突 #3：白黑名单矛盾</div>
+        <div class="alert-content">点击激励标签325白名单与423黑名单存在重叠媒体</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">📜 近7天变更</div>
+      <a href="#" class="text-secondary font-13" style="text-decoration: none;">查看全部 →</a>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-date">5.12</span>
+      <span class="tag tag-warning">配置</span>
+      <span>体验激励-强制10s 新增OG=301白名单</span>
+      <span class="timeline-actor">thea</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">5.10</span>
+      <span class="tag tag-info">上线</span>
+      <span>阶梯激励v2 灰度5% → 全量</span>
+      <span class="timeline-actor">gin</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">5.8</span>
+      <span class="tag tag-danger">异常</span>
+      <span>1150652 BottomCard调整 → CTR↓5%</span>
+      <span class="timeline-actor">坤婧</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">5.6</span>
+      <span class="tag tag-success">生产</span>
+      <span>短剧体验激励v3提测通过</span>
+      <span class="timeline-actor">gin</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">5.5</span>
+      <span class="tag tag-purple">实验</span>
+      <span>奖励式开屏 启动 50/50 A/B 实验</span>
+      <span class="timeline-actor">thea</span>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll('.perspective-tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.perspective-tab').forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+
+    const view = this.dataset.view;
+    document.querySelectorAll('.view-content').forEach(c => c.style.display = 'none');
+    document.getElementById('view-' + view).style.display = 'block';
+
+    const meta = document.querySelector('.perspective-meta span');
+    if (view === 'traffic') meta.textContent = '当前视角：流量视角 · 按场景分组';
+    if (view === 'budget') meta.textContent = '当前视角：预算视角 · 按行业分组';
+    if (view === 'custom') meta.textContent = '当前视角：自定义视角 · 配置中';
+  });
+});
+
+document.querySelectorAll('.group-header').forEach(header => {
+  header.addEventListener('click', function() {
+    this.parentElement.classList.toggle('collapsed');
+  });
+});
+
+document.querySelectorAll('.sub-tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    this.parentElement.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>

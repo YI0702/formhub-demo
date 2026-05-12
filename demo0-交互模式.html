@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>交互模式说明 · FormHub</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-logo">
+    <div class="app-logo-mark">F</div>
+    FormHub
+  </div>
+  <nav class="app-nav">
+    <a href="index.html">首页</a>
+    <a href="demo0-交互模式.html" class="active">交互模式</a>
+    <a href="demo1-洞察归因.html">洞察归因</a>
+    <a href="demo2-规则配置.html">规则配置</a>
+    <a href="demo3-全景总览.html">全景总览</a>
+  </nav>
+  <div class="app-user">
+    <span>联盟产运中心</span>
+    <div class="app-user-avatar">H</div>
+  </div>
+</header>
+
+<div class="container">
+
+<div class="page-hero">
+  <h1>交互模式：自然语言入口 + 引导式工作流</h1>
+  <p>用对话理解意图，用工作流降低复杂操作门槛——两者结合而非二选一</p>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">为什么是"AI对话 + 引导式工作流"</div>
+  </div>
+
+  <div class="compare-grid">
+    <div class="compare-card bad">
+      <div class="compare-card-title">纯AI对话的问题</div>
+      <ul>
+        <li>用户不知道能问什么、边界在哪</li>
+        <li>复杂操作（多参数、多步骤）无法保证准确</li>
+        <li>缺少视觉确认环节，容易误操作</li>
+        <li>SDK研发等专业角色更需要结构化操作</li>
+      </ul>
+    </div>
+    <div class="compare-card good">
+      <div class="compare-card-title">FormHub混合模式的价值</div>
+      <ul>
+        <li>简单查询/统计走对话，快速获取结果</li>
+        <li>复杂操作进入引导式表单，每步可见可改</li>
+        <li>AI预填充字段，用户只需要确认/调整</li>
+        <li>每个角色都能找到适合自己的入口</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top: 24px;">
+
+  <h2 style="font-size: 18px; font-weight: 600; margin-bottom: 16px;">一个完整任务的流转 · 配置新模板规则</h2>
+
+  <div class="workflow-stage">
+    <div class="workflow-stage-header">
+      <div class="workflow-stage-num">1</div>
+      <div>
+        <div class="workflow-stage-title">用户输入：自然语言表达意图</div>
+        <div class="workflow-stage-subtitle">在任意页面顶部都可以唤起AI对话入口</div>
+      </div>
+    </div>
+
+    <div style="background: #FAFBFC; border-radius: 8px; padding: 16px;">
+      <div class="ai-input-label" style="margin-bottom: 10px;">AI 智能助手</div>
+      <div class="chat-row user">
+        <div class="user-query-bubble">把体验激励-强制版10s这个模板配给应用推广预算的激活预算</div>
+      </div>
+    </div>
+
+    <div class="font-12 text-secondary mt-12">
+      <strong>设计要点：</strong>用户可以用业务语言（"应用推广"、"激活预算"）表达，无需记住PT/OG/标签ID等技术参数
+    </div>
+  </div>
+
+  <div class="workflow-stage">
+    <div class="workflow-stage-header">
+      <div class="workflow-stage-num">2</div>
+      <div>
+        <div class="workflow-stage-title">AI理解：意图识别 + 参数解析</div>
+        <div class="workflow-stage-subtitle">AI将自然语言翻译为结构化的操作指令</div>
+      </div>
+    </div>
+
+    <div class="chat-row">
+      <div class="ai-reply-bubble">
+        <div style="margin-bottom: 8px;">我理解你想做：<strong>新建模板规则配置</strong></div>
+        <div class="font-12 text-secondary">已识别以下参数（已自动匹配技术字段）：</div>
+      </div>
+    </div>
+
+    <div class="intent-card">
+      <div class="intent-row">
+        <span class="intent-key">操作类型</span>
+        <span class="intent-value">新建规则配置</span>
+        <span class="font-12 text-secondary">→ 路由到「规则配置」模块</span>
+      </div>
+      <div class="intent-row">
+        <span class="intent-key">目标模板</span>
+        <span class="intent-value">体验激励-强制版10s</span>
+        <span class="font-12 text-secondary">模板ID：1150387</span>
+      </div>
+      <div class="intent-row">
+        <span class="intent-key">预算类型</span>
+        <span class="intent-value">应用推广 → PT=12</span>
+        <span class="font-12 text-secondary">系统自动匹配</span>
+      </div>
+      <div class="intent-row">
+        <span class="intent-key">优化目标</span>
+        <span class="intent-value">激活 → OG=104</span>
+        <span class="font-12 text-secondary">系统自动匹配</span>
+      </div>
+      <div class="intent-row">
+        <span class="intent-key">标签ID</span>
+        <span class="intent-value">356</span>
+        <span class="font-12 text-secondary">基于历史规则推断</span>
+      </div>
+    </div>
+
+    <div class="font-12 text-secondary mt-12">
+      <strong>设计要点：</strong>AI不直接执行，而是把识别结果展示给用户确认。这是降低误操作风险的关键
+    </div>
+  </div>
+
+  <div class="workflow-stage">
+    <div class="workflow-stage-header">
+      <div class="workflow-stage-num">3</div>
+      <div>
+        <div class="workflow-stage-title">路由分发：跳转到对应子模块</div>
+        <div class="workflow-stage-subtitle">复杂操作不在对话框完成，跳到专业模块的引导式工作流</div>
+      </div>
+    </div>
+
+    <div class="ai-reply-bubble" style="margin-bottom: 16px;">
+      为你跳转到 <strong>规则配置</strong> 模块，参数已预填，进入引导式工作流：
+    </div>
+
+    <div class="module-card-large">
+      <div class="module-card-large-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </div>
+      <div class="module-card-large-info">
+        <h4>规则配置 · 新建</h4>
+        <p>意图识别结果已预填 · 进入4步引导式流程</p>
+      </div>
+      <div class="module-card-large-arrow">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </div>
+
+    <div class="font-12 text-secondary mt-12">
+      <strong>设计要点：</strong>不同任务路由到不同子Agent，每个Agent对应一个专业模块（规则/生产/排查/洞察）
+    </div>
+  </div>
+
+  <div class="workflow-stage">
+    <div class="workflow-stage-header">
+      <div class="workflow-stage-num">4</div>
+      <div>
+        <div class="workflow-stage-title">引导式工作流：步骤清晰 + 字段预填</div>
+        <div class="workflow-stage-subtitle">每步可见可改，关键节点有校验和确认</div>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step current">
+        <div class="step-circle">1</div>
+        <div class="step-label">基础配置</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step pending">
+        <div class="step-circle">2</div>
+        <div class="step-label">冲突检测</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step pending">
+        <div class="step-circle">3</div>
+        <div class="step-label">影响面预估</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step pending">
+        <div class="step-circle">4</div>
+        <div class="step-label">审批与发布</div>
+      </div>
+    </div>
+
+    <div class="guide-form">
+      <div class="guide-form-row">
+        <div class="guide-form-label">目标模板</div>
+        <input type="text" class="guide-form-input prefilled" value="体验激励-强制版10s（1150387）" readonly>
+        <span class="guide-form-hint">✓ AI 已预填</span>
+      </div>
+      <div class="guide-form-row">
+        <div class="guide-form-label">配置类型</div>
+        <select class="guide-form-input prefilled">
+          <option>预算白名单</option>
+          <option>流量黑名单</option>
+        </select>
+        <span class="guide-form-hint">✓ AI 已预填</span>
+      </div>
+      <div class="guide-form-row">
+        <div class="guide-form-label">PT 预算类型</div>
+        <input type="text" class="guide-form-input prefilled" value="12（Android应用推广）" readonly>
+        <span class="guide-form-hint">✓ AI 已预填</span>
+      </div>
+      <div class="guide-form-row">
+        <div class="guide-form-label">OG 优化目标</div>
+        <input type="text" class="guide-form-input prefilled" value="104（激活）" readonly>
+        <span class="guide-form-hint">✓ AI 已预填</span>
+      </div>
+      <div class="guide-form-row">
+        <div class="guide-form-label">运营标签ID</div>
+        <input type="text" class="guide-form-input prefilled" value="356" readonly>
+        <span class="guide-form-hint">✓ 系统匹配</span>
+      </div>
+      <div class="guide-form-row">
+        <div class="guide-form-label">备注</div>
+        <input type="text" class="guide-form-input" placeholder="（可选）填写本次配置的业务背景">
+      </div>
+
+      <div class="flex flex-gap-8" style="margin-top: 16px; justify-content: flex-end;">
+        <button class="btn btn-default">取消</button>
+        <button class="btn btn-primary">确认无误，进入冲突检测 →</button>
+      </div>
+    </div>
+
+    <div class="font-12 text-secondary mt-12">
+      <strong>设计要点：</strong>蓝色高亮 = AI 预填字段，用户可一眼看到哪些是自动识别、哪些需要自己填
+    </div>
+  </div>
+
+  <div class="workflow-stage">
+    <div class="workflow-stage-header">
+      <div class="workflow-stage-num">5</div>
+      <div>
+        <div class="workflow-stage-title">完成与回流：操作记录 + 数据反哺</div>
+        <div class="workflow-stage-subtitle">每个操作自动留痕，效果数据回流到洞察模块</div>
+      </div>
+    </div>
+
+    <div class="alert alert-info">
+      <div class="alert-icon">i</div>
+      <div>
+        <div class="alert-title">配置完成</div>
+        <div class="alert-content">
+          规则已发布 · 操作记录ID: OP-20260512-2057<br>
+          预计影响：覆盖请求量 ~280w/天 · 预计新增消耗 ~12w/天<br>
+          <a href="demo1-洞察归因.html" class="link">→ 7天后查看效果归因</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="font-12 text-secondary mt-12">
+      <strong>设计要点：</strong>操作完成不是终点。系统主动提示后续动作（查看效果、订阅告警），形成"操作→效果→洞察→下一步操作"的闭环
+    </div>
+  </div>
+
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">交互模式总结</div>
+  </div>
+
+  <div style="background: linear-gradient(135deg, #F0F5FF 0%, #FFFFFF 100%); border-radius: 12px; padding: 24px;">
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+      <div style="background: #FFFFFF; border: 1px solid #E5E6EB; border-radius: 10px; padding: 16px;">
+        <div style="font-size: 14px; color: #2B6FE6; font-weight: 500; margin-bottom: 8px;">💬 简单查询</div>
+        <div style="font-size: 13px; color: #4E5969; margin-bottom: 8px;">直接对话获取结果，无需进入子模块</div>
+        <div style="font-size: 12px; color: #86909C;">"看一下最近7天激励大盘CTR"<br>"模板1150387消耗多少？"</div>
+      </div>
+      <div style="background: #FFFFFF; border: 1px solid #E5E6EB; border-radius: 10px; padding: 16px;">
+        <div style="font-size: 14px; color: #FF7D00; font-weight: 500; margin-bottom: 8px;">🔀 复杂操作</div>
+        <div style="font-size: 13px; color: #4E5969; margin-bottom: 8px;">AI识别意图后路由到引导式工作流</div>
+        <div style="font-size: 12px; color: #86909C;">"配规则"、"建模板"、"排故障"<br>都进入对应模块的多步流程</div>
+      </div>
+      <div style="background: #FFFFFF; border: 1px solid #E5E6EB; border-radius: 10px; padding: 16px;">
+        <div style="font-size: 14px; color: #00B42A; font-weight: 500; margin-bottom: 8px;">🎯 主动提示</div>
+        <div style="font-size: 13px; color: #4E5969; margin-bottom: 8px;">完成操作后AI推荐下一步</div>
+        <div style="font-size: 12px; color: #86909C;">"配置完成，7天后查看归因"<br>"发现冲突，建议设置优先级"</div>
+      </div>
+    </div>
+
+    <div style="font-size: 13px; color: #4E5969; line-height: 1.8;">
+      <strong style="color: #1F2329;">核心原则</strong><br>
+      ① <strong>AI是入口不是唯一路径</strong> — 用户也可以直接走模块Tab<br>
+      ② <strong>对话理解 + 视觉确认</strong> — AI识别 + 表单展示，避免黑盒误操作<br>
+      ③ <strong>专业操作进专业模块</strong> — 复杂工作流不强行塞进对话框<br>
+      ④ <strong>每一步都可见可改</strong> — AI预填字段用蓝色标识，用户随时可以调整<br>
+      ⑤ <strong>形成闭环</strong> — 操作 → 效果 → 洞察 → 下一步操作，数据驱动决策
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>

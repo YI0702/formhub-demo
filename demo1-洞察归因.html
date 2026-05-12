@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>洞察归因 · FormHub</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-logo">
+    <div class="app-logo-mark">F</div>
+    FormHub
+  </div>
+  <nav class="app-nav">
+    <a href="index.html">首页</a>
+    <a href="demo0-交互模式.html">交互模式</a>
+    <a href="demo1-洞察归因.html" class="active">洞察归因</a>
+    <a href="demo2-规则配置.html">规则配置</a>
+    <a href="demo3-全景总览.html">全景总览</a>
+  </nav>
+  <div class="app-user">
+    <span>联盟产运中心</span>
+    <div class="app-user-avatar">H</div>
+  </div>
+</header>
+
+<div class="container">
+
+<div class="page-hero">
+  <h1>洞察归因</h1>
+  <p>基于组件化价值信号，回答"为什么好/为什么差/下一步做什么"</p>
+</div>
+
+<div class="ai-input-card">
+  <div class="ai-input-label">AI 智能助手</div>
+  <div class="ai-input-row">
+    <input type="text" class="ai-input" value="模板1150652最近CTR为什么跌了？">
+    <button class="ai-send-btn" title="发送">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2"/></svg>
+    </button>
+  </div>
+  <div class="ai-suggestions">
+    <span class="ai-suggestion">📊 给我激励视频大盘的红黑榜</span>
+    <span class="ai-suggestion">🎯 推荐3个最值得做的优化方向</span>
+    <span class="ai-suggestion">🔍 分析模板XXX vs YYY的组件差异</span>
+  </div>
+</div>
+
+<div class="module-tabs">
+  <a href="#" class="module-tab active">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+    洞察归因
+  </a>
+  <a href="demo3-全景总览.html" class="module-tab">全景总览</a>
+  <a href="#" class="module-tab">模板生产</a>
+  <a href="demo2-规则配置.html" class="module-tab">规则配置</a>
+  <a href="#" class="module-tab">效果回溯</a>
+  <a href="#" class="module-tab">问题排查</a>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div>
+      <div class="card-title">
+        <span style="display: inline-block; width: 8px; height: 8px; background: #F53F3F; border-radius: 50%;"></span>
+        模板 1150652 归因分析
+      </div>
+      <div class="card-subtitle">体验激励-强制版15s · 激励视频场景 · 数据周期：近7天</div>
+    </div>
+    <span class="tag tag-danger">CTR -5.2%</span>
+  </div>
+
+  <div class="metric-grid cols-4">
+    <div class="metric-card">
+      <div class="metric-label">当前CTR</div>
+      <div class="metric-value">54.3%</div>
+      <div class="metric-change down">↓ 5.2%</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">7日前CTR</div>
+      <div class="metric-value">59.5%</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">日均消耗</div>
+      <div class="metric-value">32w</div>
+      <div class="metric-change down">↓ 3w</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">同类红榜均值</div>
+      <div class="metric-value success">62.1%</div>
+      <div class="metric-change">差距 -7.8%</div>
+    </div>
+  </div>
+
+  <div style="font-size: 14px; font-weight: 500; margin: 16px 0 10px;">归因结论</div>
+
+  <div class="alert alert-warning">
+    <div class="alert-icon">!</div>
+    <div>
+      <div class="alert-title">主因：BottomCard展示时机变更（5.8变更）</div>
+      <div class="alert-content">
+        从原配置3s后展示调整为0s展示，导致用户在未建立兴趣前被触发互动，跳出率上升<br>
+        <span class="text-secondary font-12">变更人：坤婧 | 变更时间：2026-05-08 14:30</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-info">
+    <div class="alert-icon">i</div>
+    <div>
+      <div class="alert-title">辅因：预算结构变化</div>
+      <div class="alert-content">5.6起该模板下小游戏预算占比从22%↑34%，该预算类型整体CVR偏低拉低整体表现</div>
+    </div>
+  </div>
+
+  <div style="font-size: 14px; font-weight: 500; margin: 20px 0 10px;">组件对比 · vs 同类红榜模板 1150387</div>
+
+  <div class="table-wrap">
+    <table class="table">
+      <thead>
+      <tr>
+        <th style="width: 28%;">组件</th>
+        <th style="width: 18%;">当前模板值</th>
+        <th style="width: 18%;">红榜模板值</th>
+        <th style="width: 18%;">差异影响</th>
+        <th style="width: 18%;">价值区分度</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>BottomCard展示时机</td>
+        <td class="text-danger">0s</td>
+        <td class="text-success">3s</td>
+        <td>影响CTR ~6%</td>
+        <td><span class="tag tag-danger">P0</span></td>
+      </tr>
+      <tr>
+        <td>互动区域占比</td>
+        <td>78%</td>
+        <td class="text-success">85%</td>
+        <td>影响CTR ~3%</td>
+        <td><span class="tag tag-danger">P0</span></td>
+      </tr>
+      <tr>
+        <td>引导动画</td>
+        <td>无</td>
+        <td class="text-success">手指滑动</td>
+        <td>影响CTR ~5%</td>
+        <td><span class="tag tag-warning">P1</span></td>
+      </tr>
+      <tr>
+        <td>EndCard展示时机</td>
+        <td>视频完播</td>
+        <td>视频完播</td>
+        <td>—</td>
+        <td><span class="tag tag-default">无差异</span></td>
+      </tr>
+      <tr>
+        <td>挽留弹窗样式</td>
+        <td>默认A</td>
+        <td>默认A</td>
+        <td>—</td>
+        <td><span class="tag tag-default">无差异</span></td>
+      </tr>
+      <tr>
+        <td>关闭按钮位置</td>
+        <td>右上角</td>
+        <td>右上角</td>
+        <td>—</td>
+        <td><span class="tag tag-default">无差异</span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B6FE6" stroke-width="2"><path d="M9.663 17h4.673M12 3v1M5.34 5.34l.707.707M3 12h1M19.66 5.34l-.707.707M21 12h-1M12 21v-1M7 12a5 5 0 0 1 5-5 5 5 0 0 1 5 5c0 1.5-.5 2.5-1.5 3.5L14 17h-4l-1.5-1.5C7.5 14.5 7 13.5 7 12z"/></svg>
+      AI 提效建议
+    </div>
+    <span class="text-secondary font-13">基于组件归因 + 红榜对标自动生成</span>
+  </div>
+
+  <div class="suggestion-card high">
+    <div class="suggestion-card-header">
+      <span class="tag tag-info">建议 1 · 高优</span>
+      <span class="tag tag-success">预期收益最高</span>
+    </div>
+    <div class="suggestion-card-content">
+      将 BottomCard 展示时机回调为 <strong>3s 后出现</strong>，参考红榜模板 <span class="link" style="color: #2B6FE6;">1150387</span>
+    </div>
+    <div class="suggestion-card-meta">
+      预期 CTR 回升 +4~6% · 覆盖消耗 32w/天 · 预计日增收益 +2.5k · 无需SDK发版
+    </div>
+  </div>
+
+  <div class="suggestion-card">
+    <div class="suggestion-card-header">
+      <span class="tag tag-warning">建议 2 · 中优</span>
+    </div>
+    <div class="suggestion-card-content">
+      新增手指引导动画，扩大互动区域占比至 85%
+    </div>
+    <div class="suggestion-card-meta">
+      预期 CTR 额外 +2~3% · 需 SDK 发版支持 · 预计1.5月可上线
+    </div>
+  </div>
+
+  <div class="suggestion-card">
+    <div class="suggestion-card-header">
+      <span class="tag tag-default">建议 3 · 观察项</span>
+    </div>
+    <div class="suggestion-card-content">
+      小游戏预算占比上涨是结构性问题，建议联动预算侧确认是否符合预期
+    </div>
+    <div class="suggestion-card-meta">
+      非模板侧问题 · 建议同步 ginjyu 评估
+    </div>
+  </div>
+
+  <div class="flex flex-gap-8 mt-16">
+    <button class="btn btn-primary">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      创建 iDOMO 迭代需求
+    </button>
+    <button class="btn btn-default">导出归因报告</button>
+    <button class="btn btn-default">订阅模板异动告警</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">激励视频场景红黑榜</div>
+    <div class="toolbar">
+      <select>
+        <option>近7天</option>
+        <option>近30天</option>
+      </select>
+      <select>
+        <option>按CTR排序</option>
+        <option>按消耗排序</option>
+        <option>按eCPM排序</option>
+      </select>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+
+    <div>
+      <div style="font-size: 14px; color: #00B42A; font-weight: 500; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+        <span style="display: inline-block; width: 6px; height: 6px; background: #00B42A; border-radius: 50%;"></span>
+        红榜 Top 5
+      </div>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>模板</th>
+          <th>CTR</th>
+          <th>消耗</th>
+          <th>共性</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><span class="link">1150387</span></td>
+          <td class="text-success">62.1%</td>
+          <td>58w</td>
+          <td><span class="tag tag-success">BottomCard 3s</span></td>
+        </tr>
+        <tr>
+          <td><span class="link">1152003</span></td>
+          <td class="text-success">60.0%</td>
+          <td>22w</td>
+          <td><span class="tag tag-success">引导动画</span></td>
+        </tr>
+        <tr>
+          <td><span class="link">1149205</span></td>
+          <td class="text-success">70.0%</td>
+          <td>15w</td>
+          <td><span class="tag tag-success">点击区域大</span></td>
+        </tr>
+        <tr>
+          <td><span class="link">1150388</span></td>
+          <td class="text-success">59.6%</td>
+          <td>12w</td>
+          <td><span class="tag tag-success">BottomCard 3s</span></td>
+        </tr>
+        <tr>
+          <td><span class="link">1151205</span></td>
+          <td class="text-success">58.4%</td>
+          <td>10w</td>
+          <td><span class="tag tag-success">手指引导</span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <div style="font-size: 14px; color: #F53F3F; font-weight: 500; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+        <span style="display: inline-block; width: 6px; height: 6px; background: #F53F3F; border-radius: 50%;"></span>
+        黑榜 Bottom 5
+      </div>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>模板</th>
+          <th>CTR</th>
+          <th>消耗</th>
+          <th>短板</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr style="background: #FFF7E8;">
+          <td><span class="link">1150652</span></td>
+          <td class="text-danger">54.3%</td>
+          <td>32w</td>
+          <td><span class="tag tag-danger">BottomCard 0s</span></td>
+        </tr>
+        <tr>
+          <td><span class="link">1148901</span></td>
+          <td class="text-danger">44.0%</td>
+          <td>28w</td>
+          <td><span class="tag tag-danger">无引导动画</span></td>
+        </tr>
+        <tr>
+          <td><span class="link">1147503</span></td>
+          <td class="text-danger">42.5%</td>
+          <td>8w</td>
+          <td><span class="tag tag-danger">点击区域小</span></td>
+        </tr>
+        <tr>
+          <td><span class="link">1146801</span></td>
+          <td class="text-danger">38.2%</td>
+          <td>6w</td>
+          <td><span class="tag tag-danger">无挽留弹窗</span></td>
+        </tr>
+        <tr>
+          <td><span class="link">1145902</span></td>
+          <td class="text-danger">35.9%</td>
+          <td>5w</td>
+          <td><span class="tag tag-danger">EndCard 缺失</span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
