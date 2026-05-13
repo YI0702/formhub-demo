@@ -109,14 +109,32 @@
     </div>
 
     <div style="margin-bottom: 16px;">
-      <div style="font-size: 13px; color: #86909C; margin-bottom: 8px;">能力层（六大模块）</div>
+      <div style="font-size: 13px; color: #86909C; margin-bottom: 8px;">能力层（六大模块 · 含研发分工）</div>
       <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px;">
-        <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center; font-size: 13px;">全景总览</div>
-        <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center; font-size: 13px;">洞察归因</div>
-        <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center; font-size: 13px;">模板生产</div>
-        <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center; font-size: 13px;">规则配置</div>
-        <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center; font-size: 13px;">效果回溯</div>
-        <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center; font-size: 13px;">问题排查</div>
+        <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center;">
+          <div style="font-size: 13px; font-weight: 500; margin-bottom: 6px;">全景总览</div>
+          <div style="font-size: 11px; color: #2B6FE6;">数据研发 · 后台工程</div>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center;">
+          <div style="font-size: 13px; font-weight: 500; margin-bottom: 6px;">洞察归因</div>
+          <div style="font-size: 11px; color: #2B6FE6;">数据研发 · SDK</div>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center;">
+          <div style="font-size: 13px; font-weight: 500; margin-bottom: 6px;">模板生产</div>
+          <div style="font-size: 11px; color: #2B6FE6;">SDK</div>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center;">
+          <div style="font-size: 13px; font-weight: 500; margin-bottom: 6px;">规则配置</div>
+          <div style="font-size: 11px; color: #2B6FE6;">后台工程</div>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center;">
+          <div style="font-size: 13px; font-weight: 500; margin-bottom: 6px;">效果回溯</div>
+          <div style="font-size: 11px; color: #2B6FE6;">数据工程</div>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center;">
+          <div style="font-size: 13px; font-weight: 500; margin-bottom: 6px;">问题排查</div>
+          <div style="font-size: 11px; color: #2B6FE6;">测试 · 后台 · 数据</div>
+        </div>
       </div>
     </div>
 
@@ -136,6 +154,86 @@
         <div style="background: #F2F3F5; padding: 12px; border-radius: 6px; text-align: center; font-size: 13px; color: #4E5969;">运营后台 规则配置</div>
         <div style="background: #F2F3F5; padding: 12px; border-radius: 6px; text-align: center; font-size: 13px; color: #4E5969;">联盟效果数据</div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div>
+      <div class="card-title">研发分工与协同</div>
+      <div class="card-subtitle">六大模块 × 研发角色，明确归口与协作界面</div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table class="table">
+      <thead>
+      <tr>
+        <th style="width: 14%;">模块</th>
+        <th style="width: 24%;">主要研发方</th>
+        <th>职责拆解</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><strong>全景总览</strong></td>
+        <td>
+          <span class="tag tag-info">数据研发</span>
+          <span class="tag tag-purple">后台工程</span>
+        </td>
+        <td><span class="text-secondary font-13">数据研发：模板/规则/效果数据的聚合与口径统一<br>后台工程：模板&规则全景视图的展示层、视角切换、筛选检索</span></td>
+      </tr>
+      <tr>
+        <td><strong>洞察归因</strong></td>
+        <td>
+          <span class="tag tag-info">数据研发</span>
+          <span class="tag tag-warning">SDK</span>
+        </td>
+        <td><span class="text-secondary font-13">数据研发：价值区分度分析、红黑榜归因、诊断建议生成<br>SDK：模板组件化采集与上报，配合特征结构化拆解</span></td>
+      </tr>
+      <tr>
+        <td><strong>模板生产</strong></td>
+        <td>
+          <span class="tag tag-warning">SDK</span>
+        </td>
+        <td><span class="text-secondary font-13">SDK：模板能力建设、组件化生产、提测与发版流程支撑（基于iDOMO底层能力）</span></td>
+      </tr>
+      <tr>
+        <td><strong>规则配置</strong></td>
+        <td>
+          <span class="tag tag-purple">后台工程</span>
+        </td>
+        <td><span class="text-secondary font-13">后台工程：配置链路、冲突检测引擎、影响面预估、审批流、操作日志</span></td>
+      </tr>
+      <tr>
+        <td><strong>效果回溯</strong></td>
+        <td>
+          <span class="tag tag-success">数据工程</span>
+        </td>
+        <td><span class="text-secondary font-13">数据工程：上线前后效果对比、A/B实验结果归档、异常波动告警的数据基建</span></td>
+      </tr>
+      <tr>
+        <td><strong>问题排查</strong></td>
+        <td>
+          <span class="tag tag-danger">测试</span>
+          <span class="tag tag-purple">后台工程</span>
+          <span class="tag tag-info">数据研发</span>
+        </td>
+        <td><span class="text-secondary font-13">测试：问题复现、case沉淀、自动化巡检<br>后台工程：变更记录追溯、回滚操作链路<br>数据研发：异常维度定位、根因分析数据支持</span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="background: #F0F5FF; border: 1px solid #B5CFFA; border-radius: 8px; padding: 14px 16px; margin-top: 16px;">
+    <div style="font-size: 13px; color: #185FA5; font-weight: 500; margin-bottom: 6px;">协同要点</div>
+    <div style="font-size: 13px; color: #4E5969; line-height: 1.7;">
+      ① <strong>SDK</strong> 是组件化数据的源头，所有上层模块的数据基础来自SDK的结构化上报<br>
+      ② <strong>数据研发</strong> 承接SDK上报，做数据加工、价值分析、归因诊断，是工作台"亮点能力"的核心支撑<br>
+      ③ <strong>后台工程</strong> 负责所有用户可见的操作链路（查询、配置、审批、变更追溯）<br>
+      ④ <strong>数据工程</strong> 提供基建能力（A/B、告警、归档），与数据研发分工协作<br>
+      ⑤ <strong>测试</strong> 在问题排查中承担主动巡检和自动化能力建设
     </div>
   </div>
 </div>
