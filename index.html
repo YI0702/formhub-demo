@@ -13,11 +13,13 @@
     联盟样式一站式工作台
   </div>
   <nav class="app-nav">
-    <a href="index.html" class="active">首页</a>
+    <a href="index.html" class="active">方案说明</a>
     <a href="demo0-交互模式.html">交互模式</a>
-    <a href="demo1-洞察归因.html">洞察归因</a>
-    <a href="demo2-规则配置.html">规则配置</a>
-    <a href="demo3-全景总览.html">全景总览</a>
+    <a href="demo1-全景总览.html">全景总览</a>
+    <a href="demo2-样式生产.html">样式生产</a>
+    <a href="demo3-规则配置.html">规则配置</a>
+    <a href="demo4-洞察归因.html">洞察归因</a>
+    <a href="demo5-问题排查.html">问题排查</a>
   </nav>
   <div class="app-user">
     <span>联盟产运中心</span>
@@ -41,10 +43,11 @@
     </button>
   </div>
   <div class="ai-suggestions">
-    <span class="ai-suggestion" onclick="window.location='demo1-洞察归因.html'">📊 看一下激励视频大盘最近表现</span>
-    <span class="ai-suggestion" onclick="window.location='demo2-规则配置.html'">⚙️ 配一个新模板的预算规则</span>
-    <span class="ai-suggestion" onclick="window.location='demo3-全景总览.html'">🗂️ 给我看所有线上模板</span>
-    <span class="ai-suggestion">🔍 排查激励场景CTR异常</span>
+    <span class="ai-suggestion" onclick="window.location='demo1-全景总览.html'">给我看所有线上模板</span>
+    <span class="ai-suggestion" onclick="window.location='demo2-样式生产.html'">开始一个新模板的生产流程</span>
+    <span class="ai-suggestion" onclick="window.location='demo3-规则配置.html'">配一个新模板的预算规则</span>
+    <span class="ai-suggestion" onclick="window.location='demo4-洞察归因.html'">看一下激励视频大盘最近表现</span>
+    <span class="ai-suggestion" onclick="window.location='demo5-问题排查.html'">排查模板召回异常</span>
   </div>
 </div>
 
@@ -56,26 +59,26 @@
     </div>
   </div>
 
-  <div class="intro-grid" style="grid-template-columns: repeat(2, 1fr);">
-    <a href="demo0-交互模式.html" class="intro-card" style="border-color: #B5CFFA; background: linear-gradient(135deg, #F0F5FF 0%, #FFFFFF 100%);">
-      <div class="intro-card-icon" style="background: #2B6FE6; color: white;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <div class="intro-grid" style="grid-template-columns: repeat(3, 1fr);">
+    <a href="demo1-全景总览.html" class="intro-card">
+      <div class="intro-card-icon green">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
       </div>
-      <h3>交互模式说明 ★</h3>
-      <p>AI对话入口 + 引导式工作流，看一个完整任务的5步流转</p>
+      <h3>全景总览</h3>
+      <p>所有模板/规则/冲突一张图看清，支持流量&预算视角自由切换</p>
       <span class="intro-card-link">查看Demo →</span>
     </a>
 
-    <a href="demo1-洞察归因.html" class="intro-card">
+    <a href="demo2-样式生产.html" class="intro-card">
       <div class="intro-card-icon blue">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
       </div>
-      <h3>洞察归因</h3>
-      <p>基于37个组件特征的红黑榜归因，自动给出提效建议，一键创建生产需求</p>
+      <h3>样式生产</h3>
+      <p>从需求分析到灰度上线的完整模板生产流程，支持Skills开放扩展</p>
       <span class="intro-card-link">查看Demo →</span>
     </a>
 
-    <a href="demo2-规则配置.html" class="intro-card">
+    <a href="demo3-规则配置.html" class="intro-card">
       <div class="intro-card-icon purple">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
       </div>
@@ -84,12 +87,21 @@
       <span class="intro-card-link">查看Demo →</span>
     </a>
 
-    <a href="demo3-全景总览.html" class="intro-card">
-      <div class="intro-card-icon green">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+    <a href="demo4-洞察归因.html" class="intro-card">
+      <div class="intro-card-icon blue">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
       </div>
-      <h3>全景总览</h3>
-      <p>所有模板/规则/冲突一张图看清，支持流量&预算视角自由切换</p>
+      <h3>洞察归因</h3>
+      <p>基于37个组件特征的红黑榜归因，自动给出提效建议，一键创建生产需求</p>
+      <span class="intro-card-link">查看Demo →</span>
+    </a>
+
+    <a href="demo5-问题排查.html" class="intro-card">
+      <div class="intro-card-icon" style="background: #FFECE8; color: #F53F3F;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+      </div>
+      <h3>问题排查</h3>
+      <p>AI辅助诊断模板召回问题，自动读取线上规则，综合判断问题环节</p>
       <span class="intro-card-link">查看Demo →</span>
     </a>
   </div>
@@ -109,20 +121,15 @@
     </div>
 
     <div style="margin-bottom: 16px;">
-      <div style="font-size: 13px; color: #86909C; margin-bottom: 8px;">能力层（六大模块 · 含研发分工）</div>
-      <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px;">
+      <div style="font-size: 13px; color: #86909C; margin-bottom: 8px;">能力层（五大模块 · 含研发分工）</div>
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;">
         <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center;">
           <div style="font-size: 13px; font-weight: 500; margin-bottom: 4px;">全景总览</div>
           <div style="font-size: 11px; color: #00B42A; margin-bottom: 4px;">全新定义</div>
           <div style="font-size: 11px; color: #2B6FE6;">数据研发 · 后台工程</div>
         </div>
         <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center;">
-          <div style="font-size: 13px; font-weight: 500; margin-bottom: 4px;">洞察归因</div>
-          <div style="font-size: 11px; color: #00B42A; margin-bottom: 4px;">全新定义</div>
-          <div style="font-size: 11px; color: #2B6FE6;">数据研发 · SDK</div>
-        </div>
-        <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center;">
-          <div style="font-size: 13px; font-weight: 500; margin-bottom: 4px;">模板生产</div>
+          <div style="font-size: 13px; font-weight: 500; margin-bottom: 4px;">样式生产</div>
           <div style="font-size: 11px; color: #FF7D00; margin-bottom: 4px;">原iDOMO扩展</div>
           <div style="font-size: 11px; color: #2B6FE6;">SDK</div>
         </div>
@@ -132,9 +139,9 @@
           <div style="font-size: 11px; color: #2B6FE6;">后台工程</div>
         </div>
         <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center;">
-          <div style="font-size: 13px; font-weight: 500; margin-bottom: 4px;">效果回溯</div>
-          <div style="font-size: 11px; color: #FF7D00; margin-bottom: 4px;">原iDOMO扩展</div>
-          <div style="font-size: 11px; color: #2B6FE6;">数据工程</div>
+          <div style="font-size: 13px; font-weight: 500; margin-bottom: 4px;">洞察归因</div>
+          <div style="font-size: 11px; color: #00B42A; margin-bottom: 4px;">全新定义</div>
+          <div style="font-size: 11px; color: #2B6FE6;">数据研发 · SDK</div>
         </div>
         <div style="background: #FFFFFF; border: 1px solid #E5E6EB; padding: 12px; border-radius: 6px; text-align: center;">
           <div style="font-size: 13px; font-weight: 500; margin-bottom: 4px;">问题排查</div>
@@ -156,7 +163,7 @@
     <div>
       <div style="font-size: 13px; color: #86909C; margin-bottom: 8px;">底层（数据打通，复用现有系统）</div>
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
-        <div style="background: #F2F3F5; padding: 12px; border-radius: 6px; text-align: center; font-size: 13px; color: #4E5969;">iDOMO 模板生产</div>
+        <div style="background: #F2F3F5; padding: 12px; border-radius: 6px; text-align: center; font-size: 13px; color: #4E5969;">iDOMO 样式生产引擎</div>
         <div style="background: #F2F3F5; padding: 12px; border-radius: 6px; text-align: center; font-size: 13px; color: #4E5969;">运营后台 规则配置</div>
         <div style="background: #F2F3F5; padding: 12px; border-radius: 6px; text-align: center; font-size: 13px; color: #4E5969;">联盟效果数据</div>
       </div>
@@ -168,7 +175,7 @@
   <div class="card-header">
     <div>
       <div class="card-title">研发分工与协同</div>
-      <div class="card-subtitle">六大模块 × 研发角色，明确归口与协作界面</div>
+      <div class="card-subtitle">五大模块 × 研发角色，明确归口与协作界面</div>
     </div>
   </div>
 
@@ -191,15 +198,7 @@
         <td><span class="text-secondary font-13">数据研发：模板/规则/效果数据的聚合与口径统一<br>后台工程：模板&规则全景视图的展示层、视角切换、筛选检索</span></td>
       </tr>
       <tr>
-        <td><strong>洞察归因</strong></td>
-        <td>
-          <span class="tag tag-info">数据研发</span>
-          <span class="tag tag-warning">SDK</span>
-        </td>
-        <td><span class="text-secondary font-13">数据研发：价值区分度分析、红黑榜归因、诊断建议生成<br>SDK：模板组件化采集与上报，配合特征结构化拆解</span></td>
-      </tr>
-      <tr>
-        <td><strong>模板生产</strong></td>
+        <td><strong>样式生产</strong></td>
         <td>
           <span class="tag tag-warning">SDK</span>
         </td>
@@ -213,11 +212,12 @@
         <td><span class="text-secondary font-13">后台工程：配置链路、冲突检测引擎、影响面预估、审批流、操作日志</span></td>
       </tr>
       <tr>
-        <td><strong>效果回溯</strong></td>
+        <td><strong>洞察归因</strong></td>
         <td>
-          <span class="tag tag-success">数据工程</span>
+          <span class="tag tag-info">数据研发</span>
+          <span class="tag tag-warning">SDK</span>
         </td>
-        <td><span class="text-secondary font-13">数据工程：上线前后效果对比、A/B实验结果归档、异常波动告警的数据基建</span></td>
+        <td><span class="text-secondary font-13">数据研发：价值区分度分析、红黑榜归因、诊断建议生成<br>SDK：模板组件化采集与上报，配合特征结构化拆解</span></td>
       </tr>
       <tr>
         <td><strong>问题排查</strong></td>
@@ -238,8 +238,7 @@
       ① <strong>SDK</strong> 是组件化数据的源头，所有上层模块的数据基础来自SDK的结构化上报<br>
       ② <strong>数据研发</strong> 承接SDK上报，做数据加工、价值分析、归因诊断，是工作台"亮点能力"的核心支撑<br>
       ③ <strong>后台工程</strong> 负责所有用户可见的操作链路（查询、配置、审批、变更追溯）<br>
-      ④ <strong>数据工程</strong> 提供基建能力（A/B、告警、归档），与数据研发分工协作<br>
-      ⑤ <strong>测试</strong> 在问题排查中承担主动巡检和自动化能力建设
+      ④ <strong>测试</strong> 在问题排查中承担主动巡检和自动化能力建设
     </div>
   </div>
 </div>

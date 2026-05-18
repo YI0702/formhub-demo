@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>样式生产 · 联盟样式一站式工作台</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-logo">
+    <div class="app-logo-mark">联</div>
+    联盟样式一站式工作台
+  </div>
+  <nav class="app-nav">
+    <a href="index.html">方案说明</a>
+    <a href="demo0-交互模式.html">交互模式</a>
+    <a href="demo1-全景总览.html">全景总览</a>
+    <a href="demo2-样式生产.html" class="active">样式生产</a>
+    <a href="demo3-规则配置.html">规则配置</a>
+    <a href="demo4-洞察归因.html">洞察归因</a>
+    <a href="demo5-问题排查.html">问题排查</a>
+  </nav>
+  <div class="app-user">
+    <span>联盟产运中心</span>
+    <div class="app-user-avatar">H</div>
+  </div>
+</header>
+
+<div class="container">
+
+<div class="page-hero">
+  <h1>样式生产</h1>
+  <p>从需求分析到灰度上线的完整模板生产流程，基于iDOMO样式生产引擎</p>
+</div>
+
+<div class="ai-input-card">
+  <div class="ai-input-label">AI 智能助手</div>
+  <div class="ai-input-row">
+    <input type="text" class="ai-input" placeholder="比如：帮我创建一个新的短剧体验激励模板，参考竞媒穿山甲的滑动交互">
+    <button class="ai-send-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- Section 1: 生产流程泳道图 -->
+<div class="section-title">生产流程泳道图</div>
+<div class="section-desc">7个阶段 × 3个角色，清晰定义每个环节的职责归属</div>
+
+<div class="card" style="padding: 0; overflow: hidden;">
+  <!-- 阶段标题行 -->
+  <div style="background: #F7F8FA; border-bottom: 1px solid #E5E6EB; padding: 0;">
+    <div class="swimlane-row" style="border-bottom: 1px solid #E5E6EB; min-height: 44px;">
+      <div class="swimlane-label" style="background: #2B6FE6; color: white; font-weight: 600; font-size: 12px;">阶段</div>
+      <div class="swimlane-content" style="gap: 4px; padding: 8px 12px;">
+        <div style="flex: 1; text-align: center; font-size: 11px; font-weight: 500; color: #1F2329; padding: 6px 4px; background: #FFFFFF; border-radius: 4px; border: 1px solid #E5E6EB;">需求分析</div>
+        <span class="swimlane-arrow">→</span>
+        <div style="flex: 1; text-align: center; font-size: 11px; font-weight: 500; color: #1F2329; padding: 6px 4px; background: #FFFFFF; border-radius: 4px; border: 1px solid #E5E6EB;">设计稿</div>
+        <span class="swimlane-arrow">→</span>
+        <div style="flex: 1; text-align: center; font-size: 11px; font-weight: 500; color: #1F2329; padding: 6px 4px; background: #FFFFFF; border-radius: 4px; border: 1px solid #E5E6EB;">代码生产</div>
+        <span class="swimlane-arrow">→</span>
+        <div style="flex: 1; text-align: center; font-size: 11px; font-weight: 500; color: #1F2329; padding: 6px 4px; background: #FFFFFF; border-radius: 4px; border: 1px solid #E5E6EB;">设计精修</div>
+        <span class="swimlane-arrow">→</span>
+        <div style="flex: 1; text-align: center; font-size: 11px; font-weight: 500; color: #1F2329; padding: 6px 4px; background: #FFFFFF; border-radius: 4px; border: 1px solid #E5E6EB;">审查确认</div>
+        <span class="swimlane-arrow">→</span>
+        <div style="flex: 1; text-align: center; font-size: 11px; font-weight: 500; color: #1F2329; padding: 6px 4px; background: #FFFFFF; border-radius: 4px; border: 1px solid #E5E6EB;">自动测试</div>
+        <span class="swimlane-arrow">→</span>
+        <div style="flex: 1; text-align: center; font-size: 11px; font-weight: 500; color: #1F2329; padding: 6px 4px; background: #FFFFFF; border-radius: 4px; border: 1px solid #E5E6EB;">灰度上线</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 产品/运营行 -->
+  <div class="swimlane-row">
+    <div class="swimlane-label" style="color: #FF7D00; background: #FFF7E8;">产品/运营</div>
+    <div class="swimlane-content">
+      <div class="swimlane-step warning">脑暴/竞品输入</div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step empty"></div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step warning">方向审查</div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step warning">精修意见</div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step success">审查确认</div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step empty"></div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step warning">灰度决策</div>
+    </div>
+  </div>
+
+  <!-- 设计行 -->
+  <div class="swimlane-row">
+    <div class="swimlane-label" style="color: #722ED1; background: #F2EBFA;">设计</div>
+    <div class="swimlane-content">
+      <div class="swimlane-step empty"></div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step purple">设计输出</div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step empty"></div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step purple">精修执行</div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step success">自检</div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step empty"></div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step empty"></div>
+    </div>
+  </div>
+
+  <!-- 研发/SDK行 -->
+  <div class="swimlane-row">
+    <div class="swimlane-label" style="color: #2B6FE6; background: #E8F0FE;">研发/SDK</div>
+    <div class="swimlane-content">
+      <div class="swimlane-step empty"></div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step empty"></div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step">组件开发</div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step empty"></div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step empty"></div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step">测试执行</div>
+      <span class="swimlane-arrow">→</span>
+      <div class="swimlane-step">发版部署</div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 2: 需求分析模式 -->
+<div class="section-title">需求分析模式</div>
+<div class="section-desc">两种输入模式，灵活适配不同需求来源</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px;">
+  <div class="card" style="margin-bottom: 0;">
+    <div class="card-header">
+      <div class="card-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF7D00" stroke-width="2"><path d="M9.663 17h4.673M12 3v1M5.34 5.34l.707.707M3 12h1M19.66 5.34l-.707.707M21 12h-1M12 21v-1M7 12a5 5 0 0 1 5-5 5 5 0 0 1 5 5c0 1.5-.5 2.5-1.5 3.5L14 17h-4l-1.5-1.5C7.5 14.5 7 13.5 7 12z"/></svg>
+        Brainstorming 脑暴模式
+      </div>
+    </div>
+    <div style="font-size: 13px; color: #4E5969; margin-bottom: 16px;">AI辅助发散创意，适合新模板从0到1的创意阶段</div>
+    <div style="background: #F7F8FA; border-radius: 8px; padding: 14px;">
+      <div class="chat-row user">
+        <div class="user-query-bubble" style="font-size: 13px;">我想做一个短剧场景的体验激励模板，要求用户沉浸感强</div>
+      </div>
+      <div class="chat-row" style="margin-top: 10px;">
+        <div class="ai-reply-bubble" style="font-size: 13px;">
+          <strong>AI脑暴建议：</strong><br>
+          1. 视频前6s无干扰沉浸 → 建立兴趣<br>
+          2. 6s后底部卡片渐入，不打断观看<br>
+          3. 引导动画：手指向上滑动暗示<br>
+          4. EndCard展示剧情进度 "已解锁第3集"
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom: 0;">
+    <div class="card-header">
+      <div class="card-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B6FE6" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        竞媒样式输入模式
+      </div>
+    </div>
+    <div style="font-size: 13px; color: #4E5969; margin-bottom: 16px;">上传竞对截图 → 自动拆解组件 → 生成设计方向</div>
+    <div style="background: #F7F8FA; border-radius: 8px; padding: 14px;">
+      <div style="border: 2px dashed #B5CFFA; border-radius: 8px; padding: 20px; text-align: center; margin-bottom: 12px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#86909C" stroke-width="2" style="margin-bottom: 6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        <div style="font-size: 12px; color: #86909C;">上传竞对截图（穿山甲/快手等）</div>
+      </div>
+      <div style="font-size: 12px; color: #4E5969;">
+        <strong>自动拆解结果：</strong><br>
+        <span class="tag tag-info" style="margin: 2px;">BottomCard 滑动交互</span>
+        <span class="tag tag-info" style="margin: 2px;">全屏沉浸视频</span>
+        <span class="tag tag-info" style="margin: 2px;">倒计时引导</span>
+        <span class="tag tag-info" style="margin: 2px;">品牌Logo展示</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 3: Skills开放区 -->
+<div class="section-title">Skills 开放区</div>
+<div class="section-desc">Skills可以嵌入到生产流程的任何阶段，支持官方和社区贡献</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">
+      <span class="skill-badge official">官方</span>
+      官方 Skills
+    </div>
+  </div>
+  <div class="skill-grid">
+    <div class="skill-card">
+      <div class="skill-card-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B6FE6" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+        前后对比
+      </div>
+      <div class="skill-card-desc">自动截取模板修改前后的效果对比，生成可视化diff报告</div>
+      <div class="skill-card-meta">
+        <span class="skill-badge official">官方</span>
+        <span>适用阶段：设计精修、审查确认</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B6FE6" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+        模板交互区域审查
+      </div>
+      <div class="skill-card-desc">自动检测交互热区面积、按钮可达性、手势冲突等UX问题</div>
+      <div class="skill-card-meta">
+        <span class="skill-badge official">官方</span>
+        <span>适用阶段：代码生产、审查确认</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B6FE6" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        竞媒样式采集
+      </div>
+      <div class="skill-card-desc">自动抓取主流竞媒（穿山甲、快手联盟）的最新样式并结构化拆解</div>
+      <div class="skill-card-meta">
+        <span class="skill-badge official">官方</span>
+        <span>适用阶段：需求分析</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B6FE6" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+        组件覆盖度检查
+      </div>
+      <div class="skill-card-desc">校验模板是否涵盖所有必须组件（BottomCard/EndCard/引导动画等）</div>
+      <div class="skill-card-meta">
+        <span class="skill-badge official">官方</span>
+        <span>适用阶段：自动测试</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">
+      <span class="skill-badge community">社区</span>
+      社区 Skills
+    </div>
+    <button class="btn btn-default btn-sm">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      上传 Skill
+    </button>
+  </div>
+  <div class="skill-grid">
+    <div class="skill-card">
+      <div class="skill-card-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#722ED1" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+        动效预览生成器
+      </div>
+      <div class="skill-card-desc">根据组件配置自动生成Lottie动效预览，无需等SDK出包</div>
+      <div class="skill-card-meta">
+        <span class="skill-badge community">社区</span>
+        <span>作者：gin</span>
+        <span>4.8分</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#722ED1" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        多分辨率适配检查
+      </div>
+      <div class="skill-card-desc">自动在不同屏幕尺寸下渲染模板，检查布局溢出和截断问题</div>
+      <div class="skill-card-meta">
+        <span class="skill-badge community">社区</span>
+        <span>作者：坤婧</span>
+        <span>4.5分</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#722ED1" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+        设计规范对照
+      </div>
+      <div class="skill-card-desc">将设计稿与联盟设计规范文档自动对照，输出合规报告</div>
+      <div class="skill-card-meta">
+        <span class="skill-badge community">社区</span>
+        <span>作者：thea</span>
+        <span>4.2分</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 4: 实验与灰度 -->
+<div class="section-title">实验与灰度</div>
+<div class="section-desc">模板上线后的实验表现面板，数据驱动灰度决策</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B6FE6" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+      实验面板 · 短剧体验激励v3
+    </div>
+    <div>
+      <span class="tag tag-info">A/B实验进行中</span>
+      <span class="text-secondary font-12" style="margin-left: 8px;">实验周期：5.10 ~ 5.24</span>
+    </div>
+  </div>
+
+  <div class="metric-grid cols-4">
+    <div class="metric-card">
+      <div class="metric-label">实验组 CTR</div>
+      <div class="metric-value success">68.2%</div>
+      <div class="metric-change up">↑ vs 对照组 +12.4%</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">对照组 CTR</div>
+      <div class="metric-value">55.8%</div>
+      <div class="metric-change">基准（现行版本）</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">实验组日消耗</div>
+      <div class="metric-value success">18.5w</div>
+      <div class="metric-change up">↑ vs 对照组 +3.2w</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">统计显著性</div>
+      <div class="metric-value success">p&lt;0.01</div>
+      <div class="metric-change">置信度 99%</div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;">
+    <div style="background: #F7F8FA; border-radius: 8px; padding: 16px;">
+      <div style="font-size: 13px; font-weight: 500; margin-bottom: 10px;">CTR 趋势对比</div>
+      <div style="height: 120px; display: flex; align-items: flex-end; gap: 6px; padding-top: 20px;">
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <div style="width: 100%; background: #B5CFFA; border-radius: 3px 3px 0 0; height: 60px;"></div>
+          <span style="font-size: 10px; color: #86909C;">Day1</span>
+        </div>
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <div style="width: 100%; background: #2B6FE6; border-radius: 3px 3px 0 0; height: 72px;"></div>
+          <span style="font-size: 10px; color: #86909C;">Day3</span>
+        </div>
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <div style="width: 100%; background: #2B6FE6; border-radius: 3px 3px 0 0; height: 80px;"></div>
+          <span style="font-size: 10px; color: #86909C;">Day5</span>
+        </div>
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <div style="width: 100%; background: #2B6FE6; border-radius: 3px 3px 0 0; height: 88px;"></div>
+          <span style="font-size: 10px; color: #86909C;">Day7</span>
+        </div>
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <div style="width: 100%; background: #00B42A; border-radius: 3px 3px 0 0; height: 95px;"></div>
+          <span style="font-size: 10px; color: #86909C;">Day9</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 16px; margin-top: 8px; font-size: 11px; color: #86909C;">
+        <span><span style="display: inline-block; width: 8px; height: 8px; background: #2B6FE6; border-radius: 2px; margin-right: 4px;"></span>实验组</span>
+        <span><span style="display: inline-block; width: 8px; height: 8px; background: #B5CFFA; border-radius: 2px; margin-right: 4px;"></span>对照组</span>
+      </div>
+    </div>
+    <div style="background: #F7F8FA; border-radius: 8px; padding: 16px;">
+      <div style="font-size: 13px; font-weight: 500; margin-bottom: 10px;">组件差异</div>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>组件</th>
+          <th>实验组</th>
+          <th>对照组</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>BottomCard时机</td>
+          <td class="text-success">3s后</td>
+          <td>0s</td>
+        </tr>
+        <tr>
+          <td>引导动画</td>
+          <td class="text-success">手指滑动</td>
+          <td>无</td>
+        </tr>
+        <tr>
+          <td>互动区域占比</td>
+          <td class="text-success">85%</td>
+          <td>78%</td>
+        </tr>
+        <tr>
+          <td>EndCard</td>
+          <td>完播出现</td>
+          <td>完播出现</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="flex flex-gap-8 mt-16">
+    <button class="btn btn-primary">全量发布实验组</button>
+    <button class="btn btn-default">延长实验</button>
+    <button class="btn btn-default">终止实验</button>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>

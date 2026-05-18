@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>问题排查 · 联盟样式一站式工作台</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-logo">
+    <div class="app-logo-mark">联</div>
+    联盟样式一站式工作台
+  </div>
+  <nav class="app-nav">
+    <a href="index.html">方案说明</a>
+    <a href="demo0-交互模式.html">交互模式</a>
+    <a href="demo1-全景总览.html">全景总览</a>
+    <a href="demo2-样式生产.html">样式生产</a>
+    <a href="demo3-规则配置.html">规则配置</a>
+    <a href="demo4-洞察归因.html">洞察归因</a>
+    <a href="demo5-问题排查.html" class="active">问题排查</a>
+  </nav>
+  <div class="app-user">
+    <span>联盟产运中心</span>
+    <div class="app-user-avatar">H</div>
+  </div>
+</header>
+
+<div class="container">
+
+<div class="page-hero">
+  <h1>问题排查</h1>
+  <p>AI辅助诊断模板召回问题，自动读取线上规则，综合判断问题环节并给出解决方案</p>
+</div>
+
+<!-- Section 1: 排查入口 -->
+<div class="section-title">排查入口</div>
+<div class="section-desc">支持自然语言对话和结构化输入两种方式</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B6FE6" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      AI 对话入口
+    </div>
+  </div>
+  <div style="background: #FAFBFC; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+    <div class="chat-row user">
+      <div class="user-query-bubble">我想屏蔽开屏的系统弹窗模板，是否有现成的流量标签可以配置？</div>
+    </div>
+    <div class="chat-row" style="margin-top: 12px;">
+      <div class="ai-reply-bubble">
+        <div style="margin-bottom: 8px;">我理解你想排查：<strong>开屏场景的模板屏蔽配置问题</strong></div>
+        <div style="font-size: 12px; color: #86909C;">让我帮你进入排查流程，我需要确认一些信息...</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="font-size: 14px; font-weight: 500; margin-bottom: 12px;">结构化输入辅助</div>
+  <div class="guide-form">
+    <div class="guide-form-row">
+      <div class="guide-form-label">你的角色</div>
+      <select class="guide-form-input">
+        <option>流量方（媒体侧）</option>
+        <option>预算方（广告主侧）</option>
+      </select>
+    </div>
+    <div class="guide-form-row">
+      <div class="guide-form-label">场景</div>
+      <select class="guide-form-input">
+        <option>开屏</option>
+        <option>插屏</option>
+        <option>激励视频</option>
+        <option>信息流</option>
+      </select>
+    </div>
+    <div class="guide-form-row">
+      <div class="guide-form-label">模板ID</div>
+      <input type="text" class="guide-form-input" placeholder="如果知道，填写具体模板ID（可选）">
+    </div>
+    <div class="guide-form-row">
+      <div class="guide-form-label">媒体ID</div>
+      <input type="text" class="guide-form-input" placeholder="可选，如 1010787796523">
+    </div>
+    <div class="flex flex-gap-8 mt-16">
+      <button class="btn btn-primary">开始排查</button>
+    </div>
+  </div>
+</div>
+
+<!-- Section 2: 官方排查工作流 -->
+<div class="section-title">官方排查工作流</div>
+<div class="section-desc">引导式5步排查，每步自动调用对应数据接口</div>
+
+<div class="card">
+  <div class="steps">
+    <div class="step done">
+      <div class="step-circle">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <div class="step-label">确认角色和场景</div>
+    </div>
+    <div class="step-line" style="background: #2B6FE6;"></div>
+    <div class="step done">
+      <div class="step-circle">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <div class="step-label">输入模板ID</div>
+    </div>
+    <div class="step-line" style="background: #2B6FE6;"></div>
+    <div class="step current">
+      <div class="step-circle">3</div>
+      <div class="step-label">读取线上规则</div>
+    </div>
+    <div class="step-line"></div>
+    <div class="step pending">
+      <div class="step-circle">4</div>
+      <div class="step-label">综合判断</div>
+    </div>
+    <div class="step-line"></div>
+    <div class="step pending">
+      <div class="step-circle">5</div>
+      <div class="step-label">解决方案</div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 16px;">
+    <div style="font-size: 14px; font-weight: 500; margin-bottom: 12px;">步骤详情</div>
+
+    <div style="display: grid; gap: 12px;">
+      <div style="display: flex; gap: 12px; align-items: flex-start;">
+        <div style="width: 24px; height: 24px; background: #E8F0FE; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2B6FE6" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div>
+          <div style="font-size: 13px; font-weight: 500;">1. 确认角色和场景</div>
+          <div style="font-size: 12px; color: #86909C;">流量方 or 预算方？开屏/插屏/激励？</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 12px; align-items: flex-start;">
+        <div style="width: 24px; height: 24px; background: #E8F0FE; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2B6FE6" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div>
+          <div style="font-size: 13px; font-weight: 500;">2. 输入模板ID（如果知道）</div>
+          <div style="font-size: 12px; color: #86909C;">可通过截图识别辅助确认模板ID</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 12px; align-items: flex-start;">
+        <div style="width: 24px; height: 24px; background: #2B6FE6; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+          <span style="color: white; font-size: 11px; font-weight: 600;">3</span>
+        </div>
+        <div>
+          <div style="font-size: 13px; font-weight: 500;">3. 系统读取线上规则</div>
+          <div style="font-size: 12px; color: #86909C;">调用千寻接口 + 样式工厂MCP + 线上规则配置</div>
+          <div class="flow-indicator" style="margin-top: 6px;">
+            <span class="flow-indicator-dot"></span>
+            正在读取线上规则...
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 12px; align-items: flex-start; opacity: 0.5;">
+        <div style="width: 24px; height: 24px; background: #F2F3F5; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+          <span style="color: #86909C; font-size: 11px;">4</span>
+        </div>
+        <div>
+          <div style="font-size: 13px; font-weight: 500; color: #86909C;">4. 综合判断问题环节</div>
+          <div style="font-size: 12px; color: #C9CDD4;">基于规则数据 + 流量数据 + 配置快照判断</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 12px; align-items: flex-start; opacity: 0.5;">
+        <div style="width: 24px; height: 24px; background: #F2F3F5; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+          <span style="color: #86909C; font-size: 11px;">5</span>
+        </div>
+        <div>
+          <div style="font-size: 13px; font-weight: 500; color: #86909C;">5. 给出解决方案</div>
+          <div style="font-size: 12px; color: #C9CDD4;">具体操作建议 + 可一键跳转到规则配置模块执行</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 3: 使用技巧 -->
+<div class="section-title">使用技巧</div>
+
+<div class="tip-box">
+  <div class="tip-box-title">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2"><path d="M9.663 17h4.673M12 3v1M5.34 5.34l.707.707M3 12h1M19.66 5.34l-.707.707M21 12h-1M12 21v-1M7 12a5 5 0 0 1 5-5 5 5 0 0 1 5 5c0 1.5-.5 2.5-1.5 3.5L14 17h-4l-1.5-1.5C7.5 14.5 7 13.5 7 12z"/></svg>
+    提高排查效率的建议
+  </div>
+  <div class="tip-box-content">
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li style="padding: 4px 0;">1. <strong>说清你的角色方</strong> — 流量方（媒体侧控制模板是否展示）还是预算方（广告主侧控制投放策略）</li>
+      <li style="padding: 4px 0;">2. <strong>说清楚场景</strong> — 开屏、插屏、激励视频、信息流，不同场景的规则体系不同</li>
+      <li style="padding: 4px 0;">3. <strong>尽量给出模板ID</strong> — 如果能具体到模板ID，排查精确度会大幅提升</li>
+      <li style="padding: 4px 0;">4. <strong>当前限制说明</strong> — 支持开屏/插屏场景的截图识别来判断模板ID，但耗时较长且容易被素材内容干扰</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Section 4: Skills开放区 -->
+<div class="section-title">Skills 开放区</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">
+      <span class="skill-badge official">官方</span>
+      官方 Skills
+    </div>
+  </div>
+  <div class="skill-grid">
+    <div class="skill-card">
+      <div class="skill-card-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B6FE6" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+        模板问题排查
+      </div>
+      <div class="skill-card-desc">自动读取线上规则配置，结合千寻接口数据，定位模板召回/屏蔽问题的根因</div>
+      <div class="skill-card-meta">
+        <span class="skill-badge official">官方</span>
+        <span style="color: #2B6FE6; cursor: pointer;">knot.woa.com/skills/detail/26901</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B6FE6" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        规则冲突检测
+      </div>
+      <div class="skill-card-desc">扫描指定模板的所有关联规则，检测白名单/黑名单矛盾、优先级冲突等问题</div>
+      <div class="skill-card-meta">
+        <span class="skill-badge official">官方</span>
+        <span>适用：规则配置后验证</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">
+      <span class="skill-badge community">社区</span>
+      社区 Skills
+    </div>
+    <button class="btn btn-default btn-sm">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      上传排查 Workflow
+    </button>
+  </div>
+  <div style="font-size: 13px; color: #4E5969; padding: 16px 0 8px;">
+    支持上传自定义排查workflow，团队成员可以沉淀常见问题的排查路径，供他人复用。
+  </div>
+  <div class="skill-grid">
+    <div class="skill-card">
+      <div class="skill-card-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#722ED1" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        激励视频不出广告排查
+      </div>
+      <div class="skill-card-desc">针对激励视频场景"广告没填充"的常见case，封装完整排查流程</div>
+      <div class="skill-card-meta">
+        <span class="skill-badge community">社区</span>
+        <span>作者：gin</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 5: 测试用例 -->
+<div class="section-title">测试用例</div>
+<div class="section-desc">常见问题场景，可直接点击体验排查流程</div>
+
+<div class="example-query">
+  <div class="example-query-icon">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+  </div>
+  <div style="flex: 1;">
+    <div style="font-weight: 500; margin-bottom: 2px;">我想屏蔽开屏的系统弹窗模板，是否有现成的流量标签可以配置？</div>
+    <div style="font-size: 12px; color: #86909C;">角色：流量方 · 场景：开屏 · 类型：屏蔽配置咨询</div>
+  </div>
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#86909C" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+</div>
+
+<div class="example-query">
+  <div class="example-query-icon">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+  </div>
+  <div style="flex: 1;">
+    <div style="font-weight: 500; margin-bottom: 2px;">为什么媒体id: 1010787796523在开屏场景，无法召回的模板id: 1003230?</div>
+    <div style="font-size: 12px; color: #86909C;">角色：流量方 · 场景：开屏 · 类型：模板召回异常</div>
+  </div>
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#86909C" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+</div>
+
+<div class="example-query">
+  <div class="example-query-icon">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+  </div>
+  <div style="flex: 1;">
+    <div style="font-weight: 500; margin-bottom: 2px;">为什么已经配置了标签id: 178，但是媒体id: 1010787796523的开屏场景还是能出滑动模板1003062?</div>
+    <div style="font-size: 12px; color: #86909C;">角色：流量方 · 场景：开屏 · 类型：规则未生效</div>
+  </div>
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#86909C" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+</div>
+
+</div>
+
+</body>
+</html>
