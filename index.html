@@ -246,65 +246,80 @@
 
   <div style="font-size: 14px; font-weight: 500; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
     <span style="display: inline-block; width: 4px; height: 16px; background: #722ED1; border-radius: 2px;"></span>
-    视角二：平台基建（全新能力，分工待定）
+    视角二：平台基建（全新能力，需跨职能协同定义）
   </div>
 
   <div class="table-wrap" style="margin-bottom: 16px;">
     <table class="table">
       <thead>
       <tr>
-        <th style="width: 24%;">基建能力</th>
-        <th style="width: 35%;">能力描述</th>
-        <th style="width: 20%;">候选方</th>
-        <th>状态</th>
+        <th style="width: 22%;">基建能力</th>
+        <th style="width: 40%;">能力描述</th>
+        <th>涉及职能</th>
       </tr>
       </thead>
       <tbody>
       <tr>
         <td><strong>AI对话 + 意图路由</strong></td>
         <td><span class="text-secondary font-13">自然语言意图识别、参数解析、子模块路由分发</span></td>
-        <td><span class="tag tag-default">待定</span></td>
-        <td><span class="tag tag-info">需评估</span></td>
+        <td>
+          <span class="tag tag-info">研发</span>
+          <span class="tag tag-default">产品</span>
+        </td>
       </tr>
       <tr>
         <td><strong>Skills嵌入框架</strong></td>
         <td><span class="text-secondary font-13">Skills注册/发现/调度/权限控制/版本管理，支持官方+社区双轨</span></td>
-        <td><span class="tag tag-default">待定</span></td>
-        <td><span class="tag tag-info">需评估</span></td>
+        <td>
+          <span class="tag tag-info">研发</span>
+          <span class="tag tag-default">产品</span>
+        </td>
       </tr>
       <tr>
         <td><strong>引导式工作流引擎</strong></td>
-        <td><span class="text-secondary font-13">通用步骤流引擎（步骤定义/校验节点/分支/回退/日志），各模块复用</span></td>
-        <td><span class="tag tag-default">待定</span></td>
-        <td><span class="tag tag-info">需评估</span></td>
+        <td><span class="text-secondary font-13">通用步骤流引擎（步骤定义/校验/分支/回退/日志），各模块复用</span></td>
+        <td>
+          <span class="tag tag-info">研发</span>
+          <span class="tag tag-success">设计</span>
+          <span class="tag tag-default">产品</span>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>交互与视觉体系</strong></td>
+        <td><span class="text-secondary font-13">统一设计语言、组件规范、多视角布局、信息密度分级、工作台整体体验定义</span></td>
+        <td>
+          <span class="tag tag-success">设计</span>
+          <span class="tag tag-default">产品</span>
+        </td>
       </tr>
       <tr>
         <td><strong>统一鉴权与操作审计</strong></td>
-        <td><span class="text-secondary font-13">角色权限（产品/研发/运营）、操作留痕、审批流</span></td>
-        <td><span class="tag tag-purple">后台</span></td>
-        <td><span class="tag tag-success">可复用</span></td>
+        <td><span class="text-secondary font-13">角色权限（产品/研发/运营/设计）、操作留痕、审批流</span></td>
+        <td>
+          <span class="tag tag-info">研发</span>
+        </td>
       </tr>
       <tr>
         <td><strong>组件特征库</strong></td>
         <td><span class="text-secondary font-13">37个价值信号的结构化存储/采集/分析基础设施</span></td>
         <td>
-          <span class="tag tag-info">数据</span>
-          <span class="tag tag-warning">SDK</span>
+          <span class="tag tag-info">研发</span>
+          <span class="tag tag-default">产品</span>
         </td>
-        <td><span class="tag tag-warning">推进中</span></td>
       </tr>
       </tbody>
     </table>
   </div>
 
   <div style="background: #F2EBFA; border: 1px solid #D3ADF7; border-radius: 8px; padding: 14px 16px;">
-    <div style="font-size: 13px; color: #531DAB; font-weight: 500; margin-bottom: 6px;">平台基建分工策略</div>
+    <div style="font-size: 13px; color: #531DAB; font-weight: 500; margin-bottom: 6px;">平台基建协作模式</div>
     <div style="font-size: 13px; color: #4E5969; line-height: 1.7;">
-      平台基建属于<strong>全新产品定义</strong>，与历史业务模块的研发归口不同，需要额外评估：<br>
-      ① AI对话+意图路由：涉及大模型接入，可能需要独立的AI工程团队或复用集团能力<br>
-      ② Skills框架：需要定义标准协议，涉及后台+前端+AI三方，建议P2阶段明确归口<br>
-      ③ 引导式工作流引擎：通用能力，建议后台工程做底座，各业务模块做场景适配<br>
-      ④ 组件特征库已在推进（价值信号专项），数据+SDK联合交付
+      平台基建属于<strong>全新产品定义</strong>，需要产品、设计、研发跨职能协同：<br>
+      ① <strong>产品</strong>：定义交互模式、模块边界、Skills协议、工作流步骤标准<br>
+      ② <strong>设计</strong>：工作台整体体验设计、信息架构、多视角布局、引导式工作流的交互细节、组件设计规范<br>
+      ③ <strong>研发</strong>：AI能力接入、Skills技术框架、工作流引擎实现、鉴权与审计<br>
+      <br>
+      具体归口在P1启动时根据团队能力和资源明确，当前保持开放。
     </div>
   </div>
 </div>
